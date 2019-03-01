@@ -5,6 +5,7 @@ import { Grid, Row, Col} from 'react-bootstrap/lib';
 import { MovieInfo, Poster } from '../components';
 import { connect } from 'react-redux';
 import { fetchMovieDetail, fetchCastList, fetchTrailerList} from '../actions';
+import Result from '../components/Result';
 
 class MovieDetail extends Component {
 
@@ -18,9 +19,8 @@ class MovieDetail extends Component {
   componentWillReceiveProps(nextProps) {
      const {dispatch} = this.props;
      if(nextProps.params.id && this.props.params.id !== nextProps.params.id) {
-         dispatch(fetchMovieDetail(nextProps.params.id));
-         dispatch(fetchCastList(nextProps.params.id));
-         dispatch(fetchTrailerList(nextProps.params.id));
+         //dispatch(fetchMovieDetail(nextProps.params.id));
+         
       }
   }
 

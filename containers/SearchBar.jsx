@@ -7,6 +7,7 @@ import { push } from 'react-router-redux'
 import Autosuggest from 'react-autosuggest'
 import theme from './search.css'
 import { URL_SEARCH, API_KEY_ALT, URL_IMG, IMG_SIZE_XSMALL} from '../const';
+import Result from './Result';
 
 class SearchBar extends Component {
   constructor(props){
@@ -93,9 +94,13 @@ class SearchBar extends Component {
 
   onSuggestionSelected = (event, { suggestion, method }) => {
     if (method === 'enter')
-      event.preventDefault();
-    this.props.dispatch(push('/movie/'+ suggestion.id));
-    this.setState({ value: ''});
+      //event.preventDefault();
+      //resultText = 
+    //this.props.dispatch(push('/movie/'+ suggestion.id));
+    //Result.showResult(suggestion.id);
+    this.props.Result.showResult(suggestion.id);
+    //Result.
+    //this.setState({ value: ''});
   };
 
   render(){
