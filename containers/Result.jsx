@@ -17,37 +17,31 @@ class Result extends Component {
 
   
 
-  showResult(movieID) {
-    //this.state.resultText = "Result text will be displayed here " + movieID;
-    this.setState({ movieID: movieID});
-  }
+
 
   render(){
-    const {movieID} = this.state;
-  const resultStyle = {
-    fontWeight: 'bold',
-    //textTransform: 'capitalize',
-    fontSize: '0.5em',
-    visibility: 'visible'
-  };
+    //const {movieID} = this.props;
+    const {movieID} = "1560747";
+    const resultStyle = {
+      fontWeight: 'bold',
+      //textTransform: 'capitalize',
+      fontSize: '0.5em',
+      visibility: 'visible'
+    };
 
-  //const {resultText} = this.state;
-  const {resultText} = "Here are your results";
-  if (this.state.movieID !== '') {
-    return (
-    <div className="resultClass" style={resultStyle}>{resultText}</div>
-    );
-  } else {
-    return <p>loading...</p>;
-  }
+    //const {resultText} = this.state;
+    //const {resultText} = "Here are your results";
+    if (this.state.movieID !== '') {
+      return (
+      <div className="resultClass" style={resultStyle}>{this.state.movieID}</div>
+      );
+    } else {
+      return <div className="resultClass" style={resultStyle}>???</div>;
+    }
   
 }
 }
 
-function mapStateToProps(state){
-  const {movieID} = state;
 
-  return {movieID}
-}
 
-export default connect(mapStateToProps)(Result);
+export default connect()(Result);
