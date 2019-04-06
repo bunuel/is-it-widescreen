@@ -18,7 +18,7 @@ export default class App extends Component {
              {disclaimer}
           </div>
           <SearchBar brand="MovieBox" searchText={''} />
-          <Result  />
+          {this.props.children}
         </div>
       
     );

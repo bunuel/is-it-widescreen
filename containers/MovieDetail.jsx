@@ -19,7 +19,7 @@ class MovieDetail extends Component {
   componentWillReceiveProps(nextProps) {
      const {dispatch} = this.props;
      if(nextProps.params.id && this.props.params.id !== nextProps.params.id) {
-         //dispatch(fetchMovieDetail(nextProps.params.id));
+         dispatch(fetchMovieDetail(nextProps.params.id));
          
       }
   }

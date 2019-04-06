@@ -15,6 +15,9 @@ export const FETCH_STAR_FAILURE = 'FETCH_STAR_FAILURE';
 export const FETCH_CASTS = 'FETCH_CASTS';
 export const FETCH_CASTS_SUCCESS = 'FETCH_CASTS_SUCCESS';
 export const FETCH_CASTS_FAILURE = 'FETCH_CASTS_FAILURE';
+export const FETCH_IMDB_ID = 'FETCH_IMDB_ID'
+export const FETCH_IMDB_ID_SUCCESS = 'FETCH_IMDB_ID_SUCCESS';
+export const FETCH_IMDB_ID_FAILURE = 'FETCH_IMDB_ID_FAILURE';
 export const FETCH_TRAILERS = 'FETCH_TRAILERS';
 export const FETCH_TRAILERS_SUCCESS = 'FETCH_TRAILERS_SUCCESS';
 export const FETCH_TRAILERS_FAILURE = 'FETCH_TRAILERS_FAILURE';
@@ -115,6 +118,27 @@ function fetchCastsFail(error) {
   };
 }
 
+function fetchImdbdId() {
+  return {
+    type: FETCH_IMDB_ID
+  };
+}
+
+
+function fetchImdbdIdSuccess(data) {
+  return {
+    type: FETCH_IMDB_ID_SUCCESS,
+    data
+  };
+}
+
+function fetchImdbdIdFail(error) {
+  return {
+    type: FETCH_IMDB_ID_FAILURE,
+    error
+  };
+}
+
 function fetchTrailers() {
   return {
     type: FETCH_TRAILERS
@@ -193,6 +217,20 @@ export function fetchCastList(id){
       .then(data => dispatch(fetchCastsSuccess(data)))
       .catch(error => dispatch(fetchCastsFail(error)))
   }
+}
+
+export function fetchImdbIdData(id){
+  const url_imdb_id = URL_DETAIL + id + API_KEY;
+  return function(dispatch){
+    dispatch(fetchImdbdId())
+    return fetch(url_imdb_id)
+      .then(response => response.json())
+      .then(json => json.imdb_id)
+      .then(data => dispatch(fetchImdbdIdSuccess(data)))
+      .catch(error => dispatch(fetchImdbdIdFail(error)))
+      
+  }
+  
 }
 
 export function fetchTrailerList(id){

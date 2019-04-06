@@ -94,10 +94,36 @@ class SearchBar extends Component {
   };
 
   onSuggestionSelected = (event, { suggestion, method }) => {
-    if (method === 'enter')
-      event.preventDefault();
-    this.props.dispatch(push('/movie/'+ suggestion.id));
+    console.log(suggestion.id);
+    document.getElementsByClassName("resultClass")[0].innerHTML = suggestion.id;
+
+    //console.log(fetchImdbIdData(suggestion.id));
+
+    const {dispatch} = this.props;
+    //const imdbId = dispatch(fetchImdbIdData(suggestion.id));
+    dispatch(fetchImdbIdData(suggestion.id));
+    Result.setState({movieID:suggestion.id});
+    console.log(this.state);
     this.setState({ value: ''});
+    
+
+    //ReactDOM.render(<Result searchText={''} />, div);
+    //if (method === 'enter') {
+
+
+      //event.preventDefault();
+      //resultText = 
+    //this.props.dispatch(push('/movie/'+ suggestion.id));
+    //Result.showResult(suggestion.id);
+    //this.props.Result.showResult(suggestion.id);
+    //console.log(suggestion.id);
+    //Result.setState(suggestion.id);
+
+    //dispatch(Result);
+    //Result.render();
+    //Result.
+    //this.setState({ value: ''});
+    //}
   };
 
   render(){
