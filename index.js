@@ -23,10 +23,9 @@ ReactDOM.render(
   <Provider store={store}>
     <Router history={history} >
       <Route path="/" component={App}>
-        <IndexRoute component={MovieContainer} />
+        <IndexRoute component={MovieDetail} />
         <Route path="/movie/:id" component={MovieDetail} />
         
-        <Route path="/search/:keyword" component={MovieContainer} />
         <Route path="*" component={DisplayMsg} />
       </Route>
     </Router>

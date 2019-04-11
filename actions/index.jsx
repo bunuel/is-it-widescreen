@@ -1,4 +1,4 @@
-import {URL_LIST,URL_SEARCH, URL_DETAIL, URL_PERSON, URL_CAST, URL_VIDEO, API_KEY, API_KEY_ALT} from '../const';
+import {URL_LIST,URL_SEARCH, URL_DETAIL, URL_PERSON, URL_CAST, URL_VIDEO, API_KEY, API_KEY_ALT, URL_ASPECT_RATIO} from '../const';
 // action types
 export const SEARCH_MOVIE = 'SEARCH_MOVIE';
 export const SEARCH_MOVIE_SUCCESS = 'SEARCH_MOVIE_SUCCESS';
@@ -18,6 +18,9 @@ export const FETCH_CASTS_FAILURE = 'FETCH_CASTS_FAILURE';
 export const FETCH_IMDB_ID = 'FETCH_IMDB_ID'
 export const FETCH_IMDB_ID_SUCCESS = 'FETCH_IMDB_ID_SUCCESS';
 export const FETCH_IMDB_ID_FAILURE = 'FETCH_IMDB_ID_FAILURE';
+export const FETCH_ASPECT_RATIO = 'FETCH_ASPECT_RATIO'
+export const FETCH_ASPECT_RATIO_SUCCESS = 'FETCH_ASPECT_RATIO_SUCCESS';
+export const FETCH_ASPECT_RATIO_FAILURE = 'FETCH_ASPECT_RATIO_FAILURE';
 export const FETCH_TRAILERS = 'FETCH_TRAILERS';
 export const FETCH_TRAILERS_SUCCESS = 'FETCH_TRAILERS_SUCCESS';
 export const FETCH_TRAILERS_FAILURE = 'FETCH_TRAILERS_FAILURE';
@@ -139,6 +142,30 @@ function fetchImdbdIdFail(error) {
   };
 }
 
+
+
+function fetchAspectRatio() {
+  return {
+    type: FETCH_IMDB_ID
+  };
+}
+
+
+function fetchAspectRatioSuccess(data) {
+  return {
+    type: FETCH_IMDB_ID_SUCCESS,
+    data
+  };
+}
+
+function fetchAspectRatioFail(error) {
+  return {
+    type: FETCH_IMDB_ID_FAILURE,
+    error
+  };
+}
+
+
 function fetchTrailers() {
   return {
     type: FETCH_TRAILERS
@@ -228,6 +255,20 @@ export function fetchImdbIdData(id){
       .then(json => json.imdb_id)
       .then(data => dispatch(fetchImdbdIdSuccess(data)))
       .catch(error => dispatch(fetchImdbdIdFail(error)))
+      
+  }
+  
+}
+
+export function fetchAspectRatioData(id){
+  const url_aspect_ratio = URL_ASPECT_RATIO + id;
+  return function(dispatch){
+    dispatch(fetchAspectRatio())
+    return fetch(url_aspect_ratio)
+      .then(response => response.json())
+      .then(json => json.aspect_ratio)
+      .then(data => dispatch(fetchAspectRatioSuccess(data)))
+      .catch(error => dispatch(fetchAspectRatioFail(error)))
       
   }
   

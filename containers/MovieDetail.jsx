@@ -4,16 +4,17 @@ import { CAST_MAX_NUM, TRAILER_MAX_NUM } from '../const';
 import { Grid, Row, Col} from 'react-bootstrap/lib';
 import { MovieInfo, Poster } from '../components';
 import { connect } from 'react-redux';
-import { fetchMovieDetail, fetchCastList, fetchTrailerList} from '../actions';
-import Result from '../components/Result';
+import { fetchImdbIdData, fetchMovieDetail, fetchAspectRatioData} from '../actions';
+//import Result from '../components/Result';
 
 class MovieDetail extends Component {
 
   componentDidMount() {
     const {dispatch} = this.props;
-    dispatch(fetchMovieDetail(this.props.params.id));
-    dispatch(fetchCastList(this.props.params.id));
-    dispatch(fetchTrailerList(this.props.params.id));
+    dispatch(fetchImdbIdData(this.props.params.id));
+    //dispatch(fetchCastList(this.props.params.id));
+    //dispatch(fetchTrailerList(this.props.params.id));
+    //dispatch(fetchAspectRatioData(this.props.imdb_id))
   }
 
   componentWillReceiveProps(nextProps) {
@@ -24,36 +25,25 @@ class MovieDetail extends Component {
       }
   }
 
-  // shouldComponentUpdate(nextProps, nextState){
-  //     if(this.props.movie.id !== nextProps.movie.id) {
-  //       //console.log('shouldComponentUpdate');
-  //       return true;
-  //     }
-  //     return false;
-  // }
+  //shouldComponentUpdate(nextProps, nextState){
+      //if(this.props.movie.id !== nextProps.movie.id) {
+        //console.log('shouldComponentUpdate');
+       //return true;
+      //}
+      //return false;
+  //}
 
   render() {
+    
     const {movie, casts, trailers, isFetcing_movie, isFetcing_casts, isFetcing_trailers} = this.props;
-
+    return(<div>trying to render {movie.imdb_id}</div>);
     if(isFetcing_movie || isFetcing_casts || isFetcing_trailers) {
       return <p>loading...</p>
     }
     if(movie.hasOwnProperty('id')) {
+      console.log(movie)
       return(
-        <Grid fluid={false}>
-          <Row>
-            <Col xs={12} sm={6} md={4}>
-              <Poster id={movie.id} path={movie.poster_path} responsive />
-            </Col>
-            <Col xs={12} sm={6} md={8}>
-              <MovieInfo movie={movie}/>
-              <CastList data={casts.slice(0,CAST_MAX_NUM)} />
-            </Col>
-          </Row>
-          <Row>
-            <TrailerList data={trailers.slice(0,TRAILER_MAX_NUM)} />
-          </Row>
-        </Grid>
+        <div>{movie.imdb_id}  </div>
       );
     } else
       return null;
