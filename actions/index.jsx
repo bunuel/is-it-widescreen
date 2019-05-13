@@ -146,21 +146,21 @@ function fetchImdbdIdFail(error) {
 
 function fetchAspectRatio() {
   return {
-    type: FETCH_IMDB_ID
+    type: FETCH_ASPECT_RATIO
   };
 }
 
 
 function fetchAspectRatioSuccess(data) {
   return {
-    type: FETCH_IMDB_ID_SUCCESS,
+    type: FETCH_ASPECT_RATIO_SUCCESS,
     data
   };
 }
 
 function fetchAspectRatioFail(error) {
   return {
-    type: FETCH_IMDB_ID_FAILURE,
+    type: FETCH_ASPECT_RATIO_FAILURE,
     error
   };
 }
@@ -247,6 +247,7 @@ export function fetchCastList(id){
 }
 
 export function fetchImdbIdData(id){
+  //alert("getting imdb id");
   const url_imdb_id = URL_DETAIL + id + API_KEY;
   return function(dispatch){
     dispatch(fetchImdbdId())
@@ -261,7 +262,10 @@ export function fetchImdbIdData(id){
 }
 
 export function fetchAspectRatioData(id){
+  //alert("getting aspect ratio");
+
   const url_aspect_ratio = URL_ASPECT_RATIO + id;
+  console.log(url_aspect_ratio);
   return function(dispatch){
     dispatch(fetchAspectRatio())
     return fetch(url_aspect_ratio)

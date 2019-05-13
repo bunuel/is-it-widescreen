@@ -14,7 +14,7 @@ import { MovieContainer, MovieDetail, StarDetail } from './containers';
 import { DisplayMsg } from './components';
 
 
-//const loggerMiddleware = createLogger();
+const loggerMiddleware = createLogger();
 const routeMiddleware = routerMiddleware(hashHistory);
 let store = createStore(movieApp, composeWithDevTools(applyMiddleware(thunkMiddleware, routeMiddleware)));
 const history = syncHistoryWithStore(hashHistory,store);
