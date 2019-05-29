@@ -4,8 +4,6 @@
   font-size: 2em;
 }
 
-
-
 .App-header {
   background-color: #222;
   height: 150px;
@@ -21,12 +19,19 @@
   font-size: small;
 }
 
-.resultClass {
-  font-weight: bold;
-  color: #000000;
-  /* visibility: hidden; */
-  top: 100px;
-  display: block;
-  height: 100px;
-  color: white;
+.movieTitle {
+  color: #1beecb;
+}
+
+.pageTitle {
+  color: #e032d2;
+}
+
+.instructionsText {
+  margin: 5px;
+  font-size: small;
+}
+
+.aspectRatio {
+  color: #ee1bb9;
 }

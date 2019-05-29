@@ -7,8 +7,6 @@ import { push } from 'react-router-redux'
 import Autosuggest from 'react-autosuggest'
 import theme from './search.css'
 import { URL_SEARCH, API_KEY_ALT, URL_IMG, IMG_SIZE_XSMALL, URL_DETAIL, IMDB_ID_CONST, API_KEY} from '../const';
-import {Result} from './Result';
-import { fetchImdbIdData } from '../actions';
 
 class SearchBar extends Component {
   constructor(props){
