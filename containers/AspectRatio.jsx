@@ -6,10 +6,11 @@ class AspectRatio extends Component {
 
   reloaded = false;
 
+  isItWidescreen = "maybe?";
+
   componentDidMount() {
     const {dispatch} = this.props;
     dispatch(fetchAspectRatioData(this.props.imdb_id));
-    //document.getElementsByClassName("aspectRatio")[1].style = "display: none";
     console.log(this.props);
   }
   
@@ -37,10 +38,17 @@ class AspectRatio extends Component {
     console.log("NaN");
     return null;
   } else {
-    //document.getElementsByClassName("aspectRatio")[1].style = "display: block";
     this.reloaded = true;
+    var firstNumber = this.props.item.split(":")[0];
+
+    if (firstNumber > 1.78) {
+      this.isItWidescreen = "YES!";
+    } else {
+      this.isItWidescreen = "NO!";
+    }
+
     return(
-      <div className="aspectRatio">{this.props.item}</div>
+      <div className="aspectRatioText"><div className="aspectRatio">{this.props.item}</div>Is it widescreen? {this.isItWidescreen}</div>
     );
   }
 
@@ -48,7 +56,7 @@ class AspectRatio extends Component {
 }
 
 function mapStateToProps(state){
-  console.log("mapping state ...");
+  //console.log("mapping state ...");
   const {aspectRatio} = state;
   const {isFetching_aspectRatio, item: aspect_ratio, error_aspectRatio} = aspectRatio;
   return {isFetching_aspectRatio, item: aspect_ratio, error_aspectRatio};
