@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { AspectRatio} from '../containers';
 import { connect } from 'react-redux';
-import { fetchImdbIdData, fetchMovieDetail, fetchAspectRatioData} from '../actions';
+import { fetchMovieDetail, fetchAspectRatioData} from '../actions';
 
 class MovieDetail extends Component {
 
@@ -25,6 +25,7 @@ class MovieDetail extends Component {
    
     if(movie.hasOwnProperty('id')) {
       //AspectRatio.props.item = null;
+      
       return(
         <div><span className="movieTitle">{movie.title}</span>'s aspect ratio is... <br />
         <AspectRatio imdb_id={movie.imdb_id} item="" /> </div>

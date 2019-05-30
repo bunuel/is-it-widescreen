@@ -246,21 +246,6 @@ export function fetchCastList(id){
   }
 }
 
-export function fetchImdbIdData(id){
-  //alert("getting imdb id");
-  const url_imdb_id = URL_DETAIL + id + API_KEY;
-  return function(dispatch){
-    dispatch(fetchImdbdId())
-    return fetch(url_imdb_id)
-      .then(response => response.json())
-      .then(json => json.imdb_id)
-      .then(data => dispatch(fetchImdbdIdSuccess(data)))
-      .catch(error => dispatch(fetchImdbdIdFail(error)))
-      
-  }
-  
-}
-
 export function fetchAspectRatioData(id){
   //alert("getting aspect ratio");
 
