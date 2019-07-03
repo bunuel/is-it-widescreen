@@ -34,4 +34,29 @@
 
 .aspectRatio {
   color: #ee1bb9;
+  
+}
+
+.aspectRatioText {
+  
+  text-align: center;
+  
+  
+  align-items: center; 
+}
+
+#tv_screen {
+  display: flex;
+    justify-content: center;
+    align-items: center;
+  
+  width: 178px;
+  height: 100px;
+  background-color: gray;
+}
+
+#movie_picture {
+  width: 178px;
+  height: 100px;
+  background-color: #1beecb;
 }

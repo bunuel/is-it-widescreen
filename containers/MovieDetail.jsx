@@ -24,7 +24,6 @@ class MovieDetail extends Component {
     }
    
     if(movie.hasOwnProperty('id')) {
-      //AspectRatio.props.item = null;
       
       return(
         <div><span className="movieTitle">{movie.title}</span>'s aspect ratio is... <br />

@@ -2,10 +2,7 @@ import React from 'react'
 import { fetchAspectRatioData} from '../actions';
 
 export default function AspectRatio(props){
-  //const style = {
-    //fontWeight: 'bold',
-    //textTransform: 'uppercase'
- // };
+  
  console.log("movie " + props.imdb_id);
  const {dispatch} = this.props;
     

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchAspectRatioData } from '../actions';
+import styled from 'styled-components';
 
 class AspectRatio extends Component {
 
@@ -47,8 +48,34 @@ class AspectRatio extends Component {
       this.isItWidescreen = "NO!";
     }
 
+    var the_ratio = 1.78 / firstNumber;
+
+    console.log(the_ratio);
+
+    var the_height = 100 * the_ratio;
+
+    var the_margin = (100 - the_height) / 2;
+
+    console.log(the_height);
+
+    var the_width = 178;
+
+    if (the_height > 100) {
+      the_width = the_height;
+      the_height = 100;
+    }
+
+    const MoviePicture =  styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+      width: ${the_width}px;
+      height: ${the_height}px;
+      background-color: #1beecb;
+    `;
+
     return(
-      <div className="aspectRatioText"><div className="aspectRatio">{this.props.item}</div>Is it widescreen? {this.isItWidescreen}</div>
+      <div className="aspectRatioText"><div className="aspectRatio">{this.props.item}</div>Is it widescreen? {this.isItWidescreen}<div id="tv_screen"><MoviePicture /></div></div>
     );
   }
 
