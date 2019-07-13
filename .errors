@@ -1,0 +1,279 @@
+arning: Accessing PropTypes via the main React package is deprecated, and will be removed in  React v16.0. Use the latest available v15.* prop-types package from npm instead. For info on usage, compatibility, migration and more, see https://fb.me/prop-types-docs
+printWarning @ lowPriorityWarning.js:38
+lowPriorityWarning @ lowPriorityWarning.js:57
+get @ React.js:98
+(anonymous) @ Transition.js:259
+__webpack_require__ @ bootstrap f75cb75e0b0a4606a9b0:555
+fn @ bootstrap f75cb75e0b0a4606a9b0:86
+(anonymous) @ Collapse.js:41
+__webpack_require__ @ bootstrap f75cb75e0b0a4606a9b0:555
+fn @ bootstrap f75cb75e0b0a4606a9b0:86
+(anonymous) @ index.js:62
+__webpack_require__ @ bootstrap f75cb75e0b0a4606a9b0:555
+fn @ bootstrap f75cb75e0b0a4606a9b0:86
+(anonymous) @ SearchBar.jsx:2
+__webpack_require__ @ bootstrap f75cb75e0b0a4606a9b0:555
+fn @ bootstrap f75cb75e0b0a4606a9b0:86
+(anonymous) @ App.jsx:2
+__webpack_require__ @ bootstrap f75cb75e0b0a4606a9b0:555
+fn @ bootstrap f75cb75e0b0a4606a9b0:86
+(anonymous) @ index.js:10
+__webpack_require__ @ bootstrap f75cb75e0b0a4606a9b0:555
+fn @ bootstrap f75cb75e0b0a4606a9b0:86
+(anonymous) @ bootstrap f75cb75e0b0a4606a9b0:578
+__webpack_require__ @ bootstrap f75cb75e0b0a4606a9b0:555
+(anonymous) @ bootstrap f75cb75e0b0a4606a9b0:578
+(anonymous) @ bootstrap f75cb75e0b0a4606a9b0:578
+lowPriorityWarning.js:38 Warning: Accessing createClass via the main React package is deprecated, and will be removed in React v16.0. Use a plain JavaScript class instead. If you're not yet ready to migrate, create-react-class v15.* is available on npm as a temporary, drop-in replacement. For more info see https://fb.me/react-create-class
+printWarning @ lowPriorityWarning.js:38
+lowPriorityWarning @ lowPriorityWarning.js:57
+get @ React.js:106
+(anonymous) @ Portal.js:34
+__webpack_require__ @ bootstrap f75cb75e0b0a4606a9b0:555
+fn @ bootstrap f75cb75e0b0a4606a9b0:86
+(anonymous) @ Modal.js:26
+__webpack_require__ @ bootstrap f75cb75e0b0a4606a9b0:555
+fn @ bootstrap f75cb75e0b0a4606a9b0:86
+(anonymous) @ Modal.js:57
+__webpack_require__ @ bootstrap f75cb75e0b0a4606a9b0:555
+fn @ bootstrap f75cb75e0b0a4606a9b0:86
+(anonymous) @ index.js:134
+__webpack_require__ @ bootstrap f75cb75e0b0a4606a9b0:555
+fn @ bootstrap f75cb75e0b0a4606a9b0:86
+(anonymous) @ SearchBar.jsx:2
+__webpack_require__ @ bootstrap f75cb75e0b0a4606a9b0:555
+fn @ bootstrap f75cb75e0b0a4606a9b0:86
+(anonymous) @ App.jsx:2
+__webpack_require__ @ bootstrap f75cb75e0b0a4606a9b0:555
+fn @ bootstrap f75cb75e0b0a4606a9b0:86
+(anonymous) @ index.js:10
+__webpack_require__ @ bootstrap f75cb75e0b0a4606a9b0:555
+fn @ bootstrap f75cb75e0b0a4606a9b0:86
+(anonymous) @ bootstrap f75cb75e0b0a4606a9b0:578
+__webpack_require__ @ bootstrap f75cb75e0b0a4606a9b0:555
+(anonymous) @ bootstrap f75cb75e0b0a4606a9b0:578
+(anonymous) @ bootstrap f75cb75e0b0a4606a9b0:578
+webpackHotDevClient.js:196 ./src/index.js
+
+/var/www/html/react/widescreen/src/index.js
+  13:10  warning  'MovieContainer' is defined but never used             no-unused-vars
+  13:39  warning  'StarDetail' is defined but never used                 no-unused-vars
+  17:7   warning  'loggerMiddleware' is assigned a value but never used  no-unused-vars
+
+✖ 3 problems (0 errors, 3 warnings)
+
+printWarnings @ webpackHotDevClient.js:196
+handleWarnings @ webpackHotDevClient.js:209
+connection.onmessage @ webpackHotDevClient.js:255
+EventTarget.dispatchEvent @ eventtarget.js:49
+(anonymous) @ main.js:274
+SockJS._transportMessage @ main.js:272
+EventEmitter.emit @ emitter.js:44
+WebSocketTransport.ws.onmessage @ websocket.js:35
+webpackHotDevClient.js:196 ./src/containers/SearchBar.jsx
+
+/var/www/html/react/widescreen/src/containers/SearchBar.jsx
+   2:18  warning  'FormGroup' is defined but never used                          no-unused-vars
+   2:29  warning  'FormControl' is defined but never used                        no-unused-vars
+   2:42  warning  'Button' is defined but never used                             no-unused-vars
+   2:57  warning  'Row' is defined but never used                                no-unused-vars
+   2:62  warning  'Col' is defined but never used                                no-unused-vars
+   8:8   warning  'theme' is defined but never used                              no-unused-vars
+   9:61  warning  'URL_DETAIL' is defined but never used                         no-unused-vars
+   9:73  warning  'IMDB_ID_CONST' is defined but never used                      no-unused-vars
+   9:88  warning  'API_KEY' is defined but never used                            no-unused-vars
+  27:18  warning  Expected '===' and instead saw '=='                            eqeqeq
+  56:51  warning  Expected '===' and instead saw '=='                            eqeqeq
+  80:7   warning  img elements must have an alt prop or use role="presentation"  jsx-a11y/img-has-alt
+  80:46  warning  There should be no space after '='                             react/jsx-equals-spacing
+
+✖ 13 problems (0 errors, 13 warnings)
+
+printWarnings @ webpackHotDevClient.js:196
+handleWarnings @ webpackHotDevClient.js:209
+connection.onmessage @ webpackHotDevClient.js:255
+EventTarget.dispatchEvent @ eventtarget.js:49
+(anonymous) @ main.js:274
+SockJS._transportMessage @ main.js:272
+EventEmitter.emit @ emitter.js:44
+WebSocketTransport.ws.onmessage @ websocket.js:35
+webpackHotDevClient.js:196 ./src/actions/index.jsx
+
+/var/www/html/react/widescreen/src/actions/index.jsx
+  124:10  warning  'fetchImdbdId' is defined but never used         no-unused-vars
+  131:10  warning  'fetchImdbdIdSuccess' is defined but never used  no-unused-vars
+  138:10  warning  'fetchImdbdIdFail' is defined but never used     no-unused-vars
+
+✖ 3 problems (0 errors, 3 warnings)
+
+printWarnings @ webpackHotDevClient.js:196
+handleWarnings @ webpackHotDevClient.js:209
+connection.onmessage @ webpackHotDevClient.js:255
+EventTarget.dispatchEvent @ eventtarget.js:49
+(anonymous) @ main.js:274
+SockJS._transportMessage @ main.js:272
+EventEmitter.emit @ emitter.js:44
+WebSocketTransport.ws.onmessage @ websocket.js:35
+webpackHotDevClient.js:196 ./src/containers/Result.jsx
+
+/var/www/html/react/widescreen/src/containers/Result.jsx
+  24:12  warning  'movieID' is assigned a value but never used  no-unused-vars
+
+✖ 1 problem (0 errors, 1 warning)
+
+printWarnings @ webpackHotDevClient.js:196
+handleWarnings @ webpackHotDevClient.js:209
+connection.onmessage @ webpackHotDevClient.js:255
+EventTarget.dispatchEvent @ eventtarget.js:49
+(anonymous) @ main.js:274
+SockJS._transportMessage @ main.js:272
+EventEmitter.emit @ emitter.js:44
+WebSocketTransport.ws.onmessage @ websocket.js:35
+webpackHotDevClient.js:196 ./src/containers/MovieContainer.jsx
+
+/var/www/html/react/widescreen/src/containers/MovieContainer.jsx
+  45:10  warning  'isFetching_movieList' is assigned a value but never used  no-unused-vars
+  45:47  warning  'error_movieList' is assigned a value but never used       no-unused-vars
+
+✖ 2 problems (0 errors, 2 warnings)
+
+printWarnings @ webpackHotDevClient.js:196
+handleWarnings @ webpackHotDevClient.js:209
+connection.onmessage @ webpackHotDevClient.js:255
+EventTarget.dispatchEvent @ eventtarget.js:49
+(anonymous) @ main.js:274
+SockJS._transportMessage @ main.js:272
+EventEmitter.emit @ emitter.js:44
+WebSocketTransport.ws.onmessage @ websocket.js:35
+webpackHotDevClient.js:196 ./src/containers/MovieDetail.jsx
+
+/var/www/html/react/widescreen/src/containers/MovieDetail.jsx
+  4:28  warning  'fetchAspectRatioData' is defined but never used  no-unused-vars
+
+✖ 1 problem (0 errors, 1 warning)
+
+printWarnings @ webpackHotDevClient.js:196
+handleWarnings @ webpackHotDevClient.js:209
+connection.onmessage @ webpackHotDevClient.js:255
+EventTarget.dispatchEvent @ eventtarget.js:49
+(anonymous) @ main.js:274
+SockJS._transportMessage @ main.js:272
+EventEmitter.emit @ emitter.js:44
+WebSocketTransport.ws.onmessage @ websocket.js:35
+webpackHotDevClient.js:196 ./src/containers/AspectRatio.jsx
+
+/var/www/html/react/widescreen/src/containers/AspectRatio.jsx
+  25:10  warning  'imdb_id' is assigned a value but never used       no-unused-vars
+  25:19  warning  'aspect_ratio' is assigned a value but never used  no-unused-vars
+  32:55  warning  Expected '!==' and instead saw '!='                eqeqeq
+  52:9   warning  'the_margin' is assigned a value but never used    no-unused-vars
+
+✖ 4 problems (0 errors, 4 warnings)
+
+printWarnings @ webpackHotDevClient.js:196
+handleWarnings @ webpackHotDevClient.js:209
+connection.onmessage @ webpackHotDevClient.js:255
+EventTarget.dispatchEvent @ eventtarget.js:49
+(anonymous) @ main.js:274
+SockJS._transportMessage @ main.js:272
+EventEmitter.emit @ emitter.js:44
+WebSocketTransport.ws.onmessage @ websocket.js:35
+webpackHotDevClient.js:196 ./src/components/CastList.jsx
+
+/var/www/html/react/widescreen/src/components/CastList.jsx
+  13:26  warning  Expected to return a value at the end of this function  array-callback-return
+
+✖ 1 problem (0 errors, 1 warning)
+
+printWarnings @ webpackHotDevClient.js:196
+handleWarnings @ webpackHotDevClient.js:209
+connection.onmessage @ webpackHotDevClient.js:255
+EventTarget.dispatchEvent @ eventtarget.js:49
+(anonymous) @ main.js:274
+SockJS._transportMessage @ main.js:272
+EventEmitter.emit @ emitter.js:44
+WebSocketTransport.ws.onmessage @ websocket.js:35
+webpackHotDevClient.js:196 ./src/components/ChartData.jsx
+
+/var/www/html/react/widescreen/src/components/ChartData.jsx
+  45:11  warning  There should be no space after '='  react/jsx-equals-spacing
+  46:12  warning  There should be no space after '='  react/jsx-equals-spacing
+  47:13  warning  There should be no space after '='  react/jsx-equals-spacing
+  48:14  warning  There should be no space after '='  react/jsx-equals-spacing
+  49:18  warning  There should be no space after '='  react/jsx-equals-spacing
+  50:8   warning  There should be no space after '='  react/jsx-equals-spacing
+  51:13  warning  There should be no space after '='  react/jsx-equals-spacing
+
+✖ 7 problems (0 errors, 7 warnings)
+
+printWarnings @ webpackHotDevClient.js:196
+handleWarnings @ webpackHotDevClient.js:209
+connection.onmessage @ webpackHotDevClient.js:255
+EventTarget.dispatchEvent @ eventtarget.js:49
+(anonymous) @ main.js:274
+SockJS._transportMessage @ main.js:272
+EventEmitter.emit @ emitter.js:44
+WebSocketTransport.ws.onmessage @ websocket.js:35
+webpackHotDevClient.js:196 ./src/components/SubTitleWithIcon.jsx
+
+/var/www/html/react/widescreen/src/components/SubTitleWithIcon.jsx
+  3:8  warning  'styled' is defined but never used  no-unused-vars
+
+✖ 1 problem (0 errors, 1 warning)
+
+printWarnings @ webpackHotDevClient.js:196
+handleWarnings @ webpackHotDevClient.js:209
+connection.onmessage @ webpackHotDevClient.js:255
+EventTarget.dispatchEvent @ eventtarget.js:49
+(anonymous) @ main.js:274
+SockJS._transportMessage @ main.js:272
+EventEmitter.emit @ emitter.js:44
+WebSocketTransport.ws.onmessage @ websocket.js:35
+webpackHotDevClient.js:196 ./src/components/Poster.jsx
+
+/var/www/html/react/widescreen/src/components/Poster.jsx
+  1:18  warning  'Component' is defined but never used         no-unused-vars
+  2:8   warning  'SubTitle' is defined but never used          no-unused-vars
+  3:8   warning  'SubTitleWithIcon' is defined but never used  no-unused-vars
+  7:10  warning  'Glyphicon' is defined but never used         no-unused-vars
+
+✖ 4 problems (0 errors, 4 warnings)
+
+printWarnings @ webpackHotDevClient.js:196
+handleWarnings @ webpackHotDevClient.js:209
+connection.onmessage @ webpackHotDevClient.js:255
+EventTarget.dispatchEvent @ eventtarget.js:49
+(anonymous) @ main.js:274
+SockJS._transportMessage @ main.js:272
+EventEmitter.emit @ emitter.js:44
+WebSocketTransport.ws.onmessage @ websocket.js:35
+webpackHotDevClient.js:196 ./src/components/StarInfo.jsx
+
+/var/www/html/react/widescreen/src/components/StarInfo.jsx
+  19:47  warning  Expected '===' and instead saw '=='  eqeqeq
+
+✖ 1 problem (0 errors, 1 warning)
+
+printWarnings @ webpackHotDevClient.js:196
+handleWarnings @ webpackHotDevClient.js:209
+connection.onmessage @ webpackHotDevClient.js:255
+EventTarget.dispatchEvent @ eventtarget.js:49
+(anonymous) @ main.js:274
+SockJS._transportMessage @ main.js:272
+EventEmitter.emit @ emitter.js:44
+WebSocketTransport.ws.onmessage @ websocket.js:35
+webpackHotDevClient.js:196 ./src/components/TrailerList.jsx
+
+/var/www/html/react/widescreen/src/components/TrailerList.jsx
+  22:25  warning  Expected '!==' and instead saw '!='  eqeqeq
+
+✖ 1 problem (0 errors, 1 warning)
+
+printWarnings @ webpackHotDevClient.js:196
+handleWarnings @ webpackHotDevClient.js:209
+connection.onmessage @ webpackHotDevClient.js:255
+EventTarget.dispatchEvent @ eventtarget.js:49
+(anonymous) @ main.js:274
+SockJS._transportMessage @ main.js:272
+EventEmitter.emit @ emitter.js:44
+WebSocketTransport.ws.onmessage @ websocket.js:35

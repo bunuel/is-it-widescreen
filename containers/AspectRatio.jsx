@@ -12,11 +12,9 @@ class AspectRatio extends Component {
   componentDidMount() {
     const {dispatch} = this.props;
     dispatch(fetchAspectRatioData(this.props.imdb_id));
-    console.log(this.props);
   }
   
   componentWillReceiveProps(nextProps) {
-    console.log(this.props);
     const {dispatch} = this.props;
     if(nextProps.imdb_id && this.props.imdb_id !== nextProps.imdb_id) {
        dispatch(fetchAspectRatioData(nextProps.imdb_id));
@@ -36,7 +34,6 @@ class AspectRatio extends Component {
   }
 
   if (typeof this.props.item === 'undefined') {
-    console.log("NaN");
     return null;
   } else {
     this.reloaded = true;
@@ -50,13 +47,9 @@ class AspectRatio extends Component {
 
     var the_ratio = 1.78 / firstNumber;
 
-    console.log(the_ratio);
-
     var the_height = 100 * the_ratio;
 
     var the_margin = (100 - the_height) / 2;
-
-    console.log(the_height);
 
     var the_width = 178;
 
@@ -83,7 +76,6 @@ class AspectRatio extends Component {
 }
 
 function mapStateToProps(state){
-  //console.log("mapping state ...");
   const {aspectRatio} = state;
   const {isFetching_aspectRatio, item: aspect_ratio, error_aspectRatio} = aspectRatio;
   return {isFetching_aspectRatio, item: aspect_ratio, error_aspectRatio};

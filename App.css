@@ -46,6 +46,7 @@
 }
 
 #tv_screen {
+  margin: auto;
   display: flex;
     justify-content: center;
     align-items: center;

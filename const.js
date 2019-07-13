@@ -1,8 +1,9 @@
 export const URL_LIST = 'https://api.themoviedb.org/3/discover/movie';
 export const URL_SEARCH = 'https://api.themoviedb.org/3/search/movie?query=';
-//export const URL_SEARCH_IMDB_ID = 'https://api.themoviedb.org/3/movie/550?api_key=###'
+export const URL_SEARCH_IMDB_ID = 'https://api.themoviedb.org/3/movie/550?api_key=###';
 export const URL_DETAIL = 'https://api.themoviedb.org/3/movie/';
 export const URL_ASPECT_RATIO = 'http://localhost/cgi-bin/gar.pl?'
+//export const URL_ASPECT_RATIO = '/cgi-bin/gar.pl?';
 export const IMDB_ID_CONST = '550';
 export const URL_PERSON = 'https://api.themoviedb.org/3/person/';
 export const URL_IMG = 'https://image.tmdb.org/t/p/';

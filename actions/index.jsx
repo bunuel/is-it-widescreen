@@ -247,10 +247,8 @@ export function fetchCastList(id){
 }
 
 export function fetchAspectRatioData(id){
-  //alert("getting aspect ratio");
-
+  
   const url_aspect_ratio = URL_ASPECT_RATIO + id;
-  console.log(url_aspect_ratio);
   return function(dispatch){
     dispatch(fetchAspectRatio())
     return fetch(url_aspect_ratio)
